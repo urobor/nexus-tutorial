@@ -6,6 +6,7 @@ export function createTestContext() {
     await ctx.app.start()                                 // 4
   })
   afterAll(async () => {
+    await ctx.app.db.client.disconnect()
     await ctx.app.stop()                                  // 5
   })
   return ctx
