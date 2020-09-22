@@ -30,3 +30,11 @@ type Query {
   drafts: [Post!]!
   posts: [Post!]
 }
+
+type Topic {
+  body: String
+  certificateId: Int
+  id: Int
+  nextTopicId: Int
+  title: String
+}
